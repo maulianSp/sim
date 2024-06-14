@@ -16,7 +16,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Jurusan</a>
+                    <a class="nav-link active" aria-current="page" href="/belajarweb/sim/jurusan/index.php">Jurusan</a>
                 </li>
                 
             </ul>
