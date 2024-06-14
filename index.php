@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
-    
 
     <script src="js/bootstrap.js"></script>
     <script src="js/all.js"></script>
