@@ -22,7 +22,7 @@
                     
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="POST" action="add.php">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Kode Jurusan</label>
                                 <input type="text" class="form-control" name="kode" id="exampleInputEmail1" aria-describedby="emailHelp">
