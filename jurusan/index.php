@@ -16,9 +16,10 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col-8 m-auto">
+                <h2>Data Jurusan</h2>
                 <div class="card">
                     <div class="card-header">
-                        Data Jurusan
+                        <a href="form.php" class="btn btn-primary">Tambah Data</a>
                     </div>
                     <div class="card-body">
                     <table class="table table-striped">
