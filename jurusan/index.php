@@ -33,16 +33,36 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php
+                                #1. include koneksi
+                                include("../koneksi.php");
+
+                                #2. query untuk menampilkan data dari tabel jurusan
+                                $sql = "SELECT * FROM jurusan";
+
+                                #3. menjalankan query tampilkan data
+                                $tampil_data = mysqli_query($koneksi,$sql);
+
+                                #4. looping seluruh data dari tabel jurusan
+                                $nomor = 1;
+                                foreach($tampil_data as $jur){
+                            ?>
+
                             <tr>
-                                <th scope="row">1</th>
-                                <td>IK</td>
-                                <td>Informatika Komputer</td>
-                                <td>Ismanuddin, S.Kom, M.Kom.</td>
+                                <th scope="row"><?php echo $nomor++ ?></th>
+                                <td><?php echo $jur['kode'] ?></td>
+                                <td><?php echo $jur['nama_jurusan'] ?></td>
+                                <td><?php echo $jur['id_dosen'] ?></td>
                                 <td>
                                     <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
+
+                            <?php 
+                                }
+                            ?>
+                            
                         </tbody>
                     </table>
                     </div>
