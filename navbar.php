@@ -8,7 +8,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Mahasiswa</a>
+                    <a class="nav-link active" aria-current="page" href="/belajarweb/sim/mahasiswa/index.php">Mahasiswa</a>
                 </li>
 
                 <li class="nav-item">
