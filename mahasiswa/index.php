@@ -55,11 +55,11 @@
                                 <td><?php echo $jur['nama_jurusan'] ?></td>
                                 <td>
                                     <!-- tombol detail -->
-                                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#detail">
+                                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#detail<?php echo $jur['id_mahasiswa'] ?>">
                                         <i class="fa-solid fa-eye"></i>
                                     </button>
                                     <!-- modal detail -->
-                                    <div class="modal fade" id="detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="detail<?php echo $jur['id_mahasiswa'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                             <div class="modal-header">
