@@ -38,7 +38,7 @@
                                 include("../koneksi.php");
 
                                 #2. query untuk menampilkan data dari tabel jurusan
-                                $sql = "SELECT * FROM mahasiswa";
+                                $sql = "SELECT * FROM mahasiswa INNER JOIN jurusan ON mahasiswa.id_jurusan=jurusan.id_jurusan";
 
                                 #3. menjalankan query tampilkan data
                                 $tampil_data = mysqli_query($koneksi,$sql);
@@ -52,8 +52,72 @@
                                 <th scope="row"><?php echo $nomor++ ?></th>
                                 <td><?php echo $jur['nim'] ?></td>
                                 <td><?php echo $jur['nama'] ?></td>
-                                <td><?php echo $jur['id_jurusan'] ?></td>
+                                <td><?php echo $jur['nama_jurusan'] ?></td>
                                 <td>
+                                    <!-- tombol detail -->
+                                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#detail">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                    <!-- modal detail -->
+                                    <div class="modal fade" id="detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Data Detail <?php echo $jur['nama'] ?></h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <table class="table">
+                                                
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">NIM</th>
+                                                        <td><?php echo $jur['nim'] ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Nama Lengkap</th>
+                                                        <td><?php echo $jur['nama'] ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tempat, Tanggal Lahir</th>
+                                                        <td><?php echo $jur['tempat_lahir'] ?>, <?php echo $jur['tanggal_lahir'] ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Alamat</th>
+                                                        <td><?php echo $jur['alamat'] ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Jenis Kelamin</th>
+                                                        <td><?php echo $jur['jns_kelamin'] ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Email</th>
+                                                        <td><?php echo $jur['email'] ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Jurusan</th>
+                                                        <td><?php echo $jur['nama_jurusan'] ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Agama</th>
+                                                        <td><?php echo $jur['agama'] ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Foto</th>
+                                                        <td>
+                                                            <img src="foto/<?php echo $jur['foto'] ?>" width="200" alt="">
+                                                        </td>
+                                                    </tr>
+
+                                                    
+                                                </tbody>
+                                            </table>
+                                            </div>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
                                 </td>
