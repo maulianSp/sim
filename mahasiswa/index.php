@@ -80,7 +80,12 @@
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">Tempat, Tanggal Lahir</th>
-                                                        <td><?php echo $jur['tempat_lahir'] ?>, <?php echo $jur['tanggal_lahir'] ?></td>
+                                                        <?php
+                                                            #mengubah format tanggal
+                                                            $tanggal = date_create($jur['tanggal_lahir']);
+                                                            $tanggal_baru = date_format($tanggal,'d M Y')
+                                                        ?>
+                                                        <td><?php echo $jur['tempat_lahir'] ?>, <?php echo $tanggal_baru ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">Alamat</th>
