@@ -124,7 +124,29 @@
                                     </div>
 
                                     <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
+                                    
+                                    <!-- tombol hapus -->
+                                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $jur['id_mahasiswa'] ?>">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                    <!-- modal hapuss -->
+                                    <div class="modal fade" id="hapus<?php echo $jur['id_mahasiswa'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Peringatan</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Yakin data dari <b><?php echo $jur['nama'] ?></b> ingin dihapus?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                                <a href="del.php?id=<?php echo $jur['id_mahasiswa'] ?>" class="btn btn-primary">Hapus</a>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
 
