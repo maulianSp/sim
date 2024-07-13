@@ -123,7 +123,7 @@
                                         </div>
                                     </div>
 
-                                    <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
+                                    <a href="edit.php?id=<?php echo $jur['id_mahasiswa'] ?>" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
                                     
                                     <!-- tombol hapus -->
                                     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $jur['id_mahasiswa'] ?>">
