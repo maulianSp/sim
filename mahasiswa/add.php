@@ -63,6 +63,6 @@ move_uploaded_file($tmp_file,"foto/$nama_foto")
 
 // #6. redirect ke index jurusan
 // ?>
-// <script>
+<script>
     document.location="index.php";
-// </script>
+</script>

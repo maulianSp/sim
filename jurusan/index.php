@@ -54,7 +54,7 @@
                                 <td><?php echo $jur['nama_jurusan'] ?></td>
                                 <td><?php echo $jur['id_dosen'] ?></td>
                                 <td>
-                                    <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
+                                    <a href="edit.php?id=<?php echo $jur['id_jurusan'] ?>" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
