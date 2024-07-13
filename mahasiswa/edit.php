@@ -39,7 +39,8 @@ $data = mysqli_fetch_array($edit_data);
                     
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="add.php" enctype="multipart/form-data">
+                        <form method="POST" action="update.php" enctype="multipart/form-data">
+                        <input type="hidden" name="id_mahasiswa" value="<?php echo $data['id_mahasiswa'] ?>">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">NIM</label>
                                 <input type="text" readonly value="<?php echo $data['nim'] ?>" class="form-control" name="nim" id="exampleInputEmail1" aria-describedby="emailHelp">
