@@ -18,6 +18,10 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/belajarweb/sim/jurusan/index.php">Jurusan</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/belajarweb/sim/logout.php">Logout</a>
+                </li>
                 
             </ul>
         <form class="d-flex" role="search">
